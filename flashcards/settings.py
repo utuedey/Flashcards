@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
     'apps.cards.apps.CardsConfig',
 
     # 3rd Party.
@@ -80,8 +81,12 @@ WSGI_APPLICATION = 'flashcards.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': config("NAME_OF_DB"),
+        'USER': config("USER_OF_DB"),
+        'PASSWORD': config("PASSWORD_OF_DB"),
+        'HOST': config("HOST_OF_DB"),
+        'PORT': config("PORT_OF_DB")
     }
 }
 
