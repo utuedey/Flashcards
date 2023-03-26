@@ -20,7 +20,8 @@
         font-size: 1.125rem;
         text-anchor: middle;
         -webkit-user-select: none;
-        -moz-user-select: none;
+        -moz-user-select: 
+        none;
         user-select: none;
       }
 
@@ -90,10 +91,9 @@
     <h1>Welcome to Flashcards app🗂!</h1>
     <p class="lead">On the Card page, you'll see all the existing cards and be able to create new ones. On each flashcard you can add a question and an answer which you can later edit</p>
     <p class="lead">
-      <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Start App</a>
+    <a href="{% url 'card-create' %}" class="btn btn-lg btn-light fw-bold border-white bg-white">Start App</a>
     </p>
   </main>
-
   <footer class="mt-auto text-white-50">
     <p>Flashcards App <a href="https://github.com/Flashcards" class="text-white">Github</a>, by Joseph Utuedeye<a href="https://twitter.com/" class="text-white">@joecodes</a>.</p>
   </footer>
