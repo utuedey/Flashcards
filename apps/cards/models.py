@@ -22,3 +22,16 @@ class Card(models.Model):
     def __str__(self):
         """Returns  a string representation of the card objects"""
         return self.question
+
+    def move(self, solved):
+        """Method replicate the behavior of moving a card between boxes
+        Argument:
+        - solved (bool): True if the user knows the answer
+                         False if the user doesn't know the answer
+        """
+        new_box = self.box + 1 if solved else BOXES[0]
+        
+        if new_box in BOXES:
+            self.box = new_box
+            self.save()
+        return self
