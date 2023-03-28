@@ -37,3 +37,24 @@ class CardUpdateView(CardCreateView, UpdateView):
     -success_url: The url to return request to when the form is sent
     """
     success_url = reverse_lazy("card-list")
+
+class BoxView(CardListView):
+    """A subclass of CardListView that lists the boxes.
+    Attributes:
+    template_name: The template that BoxView will render.
+    
+    """
+    template_name = "cards/box.html"
+
+    def get_queryset(self):
+        """Returns only the cards where the box number matches the box_num value."""
+        return Card.objects.filter(box=self.kwargs["box_num"])
+    
+    def get_context_data(self, **kwargs):
+        """Returns a dictionary with the number of boxes
+        Argument:
+        - Kwargs: = box_num
+        """
+        context = super().get_context_data(**kwargs)
+        context["box_number"] = self.kwargs["box_num"]
+        return context
