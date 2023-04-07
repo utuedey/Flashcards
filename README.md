@@ -26,7 +26,7 @@ The Django Flashcards app replicates a spaced repetition system which can boost 
 - Move card to a new box
 
 # Getting started
-- User visits flashcards.tech
+- User visits [Flashcards App](www.flashcards.tech)
 - click on the start app button on the landing page
 - The app load the card_page
 ## on the card_page you'll see all the existing cards and be able to create new ones.
@@ -92,8 +92,8 @@ git checkout https://github.com/utuedey/flashcards -b name_of_new_branch
 - [Philipp Acsany](https://www.linkedin.com/in/acsany/) Realpython tutor.
 
 # Related Projects
--[AirBnB](https://github.com/utuedey/AirBnB_clone_v4): A simple web application built using Python, Flask, and JQuery.
--[Simple_shell](https://github.com/peaceissa/simple_shell): A command line interpreter that replicates the sh program.
+- [AirBnB](https://github.com/utuedey/AirBnB_clone_v4): A simple web application built using Python, Flask, and JQuery.
+- [Simple_shell](https://github.com/peaceissa/simple_shell): A command line interpreter that replicates the sh program.
 
 # License
 MIT License
