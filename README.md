@@ -85,9 +85,10 @@ git checkout https://github.com/utuedey/flashcards -b name_of_new_branch
 
 # Acknowledgments
 - Alx school Staff - For the help, advice and resources they provided us with during this project and during all our curriculum.
-- Osasumwen Uwigiaren - For his support.
+- Mr. Utuedeye Samuel - For his encouragement and invaluable support.
+- Osasumwen Uwigiaren - For his support and Friendship.
 - Blessing Jonathan (Jovi) - For her suggestions and honest reviews of the application.
-- Julien Barbier for his inspiration.
+- Derrick Ampire(Alx SE Technical mentor) - for his mentorship and review of the project.
 - [Philipp Acsany](https://www.linkedin.com/in/acsany/) Realpython tutor.
 
 # Related Projects
