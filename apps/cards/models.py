@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from django.db import models
 
 NUM_OF_BOXES = 5 
@@ -17,7 +19,7 @@ class Card(models.Model):
         default=BOXES[0],
     )
     # Timestamp of the card's date and time of creation
-    date_created = models.DateTimeField(auto_now_add=True) 
+    date_created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         """Returns  a string representation of the card objects"""
@@ -29,6 +31,8 @@ class Card(models.Model):
         - solved (bool): True if the user knows the answer
                          False if the user doesn't know the answer
         """
+        # Define new_box variable as the value of the box
+        # depending on the argument value
         new_box = self.box + 1 if solved else BOXES[0]
         
         if new_box in BOXES:

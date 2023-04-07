@@ -1,10 +1,12 @@
+#!/usr/bin/env python3
+
 from django.urls import path
 from django.views.generic import TemplateView
 from . import views
 
 urlpatterns = [
     # Url route for the landing page
-    path("", TemplateView.as_view(template_name="cards/index.html"),   # url for the landing_page
+    path("", TemplateView.as_view(template_name="cards/index.html"),
           name="home"
           ),
     # Url route for the card list page

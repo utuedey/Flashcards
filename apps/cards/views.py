@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 import random
 from django.urls import reverse_lazy
@@ -23,7 +23,7 @@ class CardListView(ListView):
 class CardCreateView(CreateView):
     """A class-based view that creates a new card
     Attributes:
-    - field: The fields the form would show
+    - fields: The fields the form would show
            - question field
            - answer field
            - box field
@@ -35,7 +35,7 @@ class CardCreateView(CreateView):
 
 class CardUpdateView(CardCreateView, UpdateView):
     """A class-based view that inherits from CardCreateView and
-    UpdateView that update an exisitng card.
+       UpdateView that update an exisitng card.
     Attribute:
     -success_url: The url to return request to when the form is sent
     """
@@ -51,11 +51,11 @@ class BoxView(CardListView):
     form_class = CardCheckForm
 
     def get_queryset(self):
-        """Returns only the cards where the box number matches the box_num value."""
+        """Return only the cards where the box number matches the box_num value."""
         return Card.objects.filter(box=self.kwargs["box_num"])
     
     def get_context_data(self, **kwargs):
-        """Returns a dictionary with the number of boxes
+        """Return a dictionary with the number of boxes
         Argument:
         - Kwargs: = box_num
         """
@@ -71,6 +71,6 @@ class BoxView(CardListView):
         if form.is_valid():
             card = get_object_or_404(Card, id=form.cleaned_data["card_id"])
             card.move(form.cleaned_data["solved"])
-
+        # the HTTP_REFERER is the URL of the box for the current check session.
         return redirect(request.META.get("HTTP_REFERER"))
 
